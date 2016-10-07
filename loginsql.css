@@ -1,0 +1,370 @@
+
+html {
+	background-color: grey;
+}
+.container {
+	margin:0px;
+	background-color: #f5f5f5;
+	padding: 0px;
+	height: 100vh;
+	
+	margin-top: 30px;
+}
+	.regga {
+		font-family: sans-serif;
+		font-variant: small-caps;
+		letter-spacing: 0.2px;
+		border:0.4px solid black;
+		margin-bottom: 100px;
+		padding-bottom: 30px;
+		margin-top: 50px;
+
+		border-radius: 20px;
+	 box-shadow: 1px 1px 2px black;
+		    background-color: #DDD;
+	}
+
+ h2 {
+		font-family: sans-serif;
+		    text-shadow: 0.5px 0.5px 1px grey;
+		        margin-bottom: 20px;
+
+
+	}
+
+.regga .button {
+		margin-top: 20px;
+font-size: 1.2em;
+		background-color: green;
+		color:white;
+		font-family: sans-serif;
+		font-variant: small-caps;
+		        box-shadow: 1px 1px 2px black;
+		    letter-spacing: 1.1px;
+		    border:0px;
+		    border-radius: 5px;
+
+	}
+
+	fieldset {
+		text-align: center;
+	}
+input {
+	margin-bottom: 20px;
+	text-align: center;
+	    box-shadow: 1px 1px 1px grey;
+	    color:black;
+}
+
+.header {
+	padding-top: 0px;
+	height: 50px;
+	margin:0px;
+	padding:0px;
+	background-color:#0F145B;
+	box-shadow: 2px 0.2px 15px black;
+	z-index: 998;
+	    display: block;
+    position: fixed;
+    color:white;
+
+}
+
+
+
+.visainlogg {
+
+	
+	padding-left:10px;
+	color:white;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+
+
+.loggain {
+	
+	padding:0px;
+	margin-left:0px;
+	display:flex;
+	justify-content:flex-end;
+	align-items:center;
+	height:100%;
+	padding-right:15px;
+}
+
+.loggain input {
+	margin:2px;
+	
+	border:0px;
+	background-color:F5F5F5;
+}
+
+.loggain .button {
+	border-radius:15px;
+	background-color: #999;
+}
+
+button {
+	background-color: #999;
+}
+
+ul > li  {
+	display: inline-block;
+	margin-right: 26px;
+}
+
+li {
+	    font-variant: small-caps;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+li a {
+	   font-variant: small-caps;
+    
+    color:white;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+a:hover {
+	    text-decoration: none;
+    list-style-type: none;
+    color:white;
+
+}
+
+.horahora {
+	color:white;
+	line-height: 2em;
+	margin-bottom: 100px;
+	margin-top: 50px;
+}
+
+.content {
+	background-color: #337ab7;
+margin: 0px;
+    padding: 0px;
+}
+
+.content {
+		background-color: #337ab7;
+margin: 0px;
+    padding: 0px;
+}
+
+.footer ul {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.footer ul li {
+	display: block;
+
+
+}
+
+
+.footer {
+	margin:0px;
+	padding:0px;
+	background-color: #0C3E69;
+
+}
+
+.copyright {
+	color:white;
+	font-size: 0.9em;
+	margin-top: 40px;
+}
+
+.inloggsruta {
+	display: flex;
+	justify-content:flex-end;
+}
+
+.filehora {
+	box-shadow: none;
+}
+
+#content2 {
+	    background-color:rgba(255,255,255,.15);
+
+}
+
+
+#content3 {
+	background-color:rgba(255,255,255,.15);
+}
+
+.sida {
+	background-color: white;
+	margin-top: 80px;
+}
+
+form h5 {
+	    margin: 0px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-left:  8.33333333%;
+}
+
+select {
+	margin-bottom: 20px;
+	line-height: 20px;
+	-webkit-select-appearance: none;
+}
+
+#rewards {
+	    height: 90px;
+}
+
+.profilruta {
+	background-color: #337AB7;
+	padding-bottom: 50px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    background-color: #337ab7;
+  
+    padding-top: 70px;
+    
+    line-height: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px black;
+
+
+
+
+}
+
+
+.profilruta li {
+	display: block;
+	font-variant: normal;
+	font-size: 15px;
+	color:black;
+
+	margin:0px;
+}
+
+.profilruta ul {
+	text-align: center;
+	background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+#rubrikens {
+	font-variant: small-caps;
+    font-size: 2em;
+    margin-bottom: 25px;
+    color:black;
+    text-shadow:none;
+}
+
+
+.error {
+	background-color: red;
+	text-align: center;
+	font-variant: small-caps;
+	font-size: 1.5em;
+	margin-top: 60px;
+	padding:10px;
+	border-radius: 10px;
+	color:black;
+	letter-spacing: 0.5px;
+}
+
+
+#litenTextProfilRuta {
+	    color: black;
+   margin:0px;
+   padding:0px;
+}
+
+.litenTextProfilRuta {
+	    color: black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: grey;
+    padding: 6px;
+    font-size:1em;
+
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0.2px 0px 2px black;
+}
+
+.profilbild {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+    height: 130px;
+    text-align: center;
+   padding: 0px;
+
+    
+}
+
+
+img {
+	width: 100%;
+	margin: 0px;
+	height: 100%;
+	
+
+}
+
+.updatePP {
+	 position: absolute;
+    top: 10px;
+    right: 7px;
+    visibility: hidden;
+
+}
+
+
+.ppFil {
+	margin-top: 0px;
+	margin-bottom: 20px;
+
+}
+
+
+.bilderna {
+	border:1px solid black;
+	
+	height: 150px;
+	margin-top: 15px;
+
+
+
+}
+
+
+#archive {
+	padding-top: 100px;
+
+}
+
+
+@media (min-width: 800px) { 
+.bilderna {
+	border:1px solid black;
+	
+	height: 200px;
+	margin-top: 15px;
+
+
+
+}
+ }
+
