@@ -40,7 +40,7 @@ echo "
 <div style='padding:10px; ' class=' col-xs-offset-0 col-xs-4 col-md-3 col-md-offset-0'>
     <div style='padding: 0px;' class='bilderna col-xs-12'>
       <img style='width:100%; height:80%;' src='profilePhotos/".$row['file']."'>
-      <div style='text-align: center;'><a href='profile.php'> ".$row['first']." ".$row['last']."</div>
+      <div style='text-align: center;'><a href='user.php?id=".$row['id']."'> ".$row['first']." ".$row['last']."</div>
     </div>
   </div>
   ";
