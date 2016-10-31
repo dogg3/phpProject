@@ -29,7 +29,12 @@ if (!$row['file']) {
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="loginsql.css" rel="stylesheet">
-     <script type="text/javascript">
+     
+
+
+
+
+<script type="text/javascript">
 	
 
 var kuk = 0;
@@ -40,12 +45,21 @@ function menySlider() {
 	if (kuk == 1) {meny.style.marginLeft = "-210px";};
 	kuk++;
 
+
 }
 </script>
+
+
+
+
+
+
+
+
 		</head>
 
 
-<body>
+<body onload="inlogg()">
 
 <div class="col-xs-12 header">
 		<!-- meny-php -->
@@ -87,10 +101,10 @@ function menySlider() {
 
 			<?php if (!isset($_SESSION['id']))
 
-		{ echo "<li><a href='registrera.php'>register</a></li>
+		{ echo "<li id='firstLi'><a href='registrera.php'>register</a></li><br>
 		<li><a href='index.php'>home</a></li>
 
-
+<br>
 		";} 
 
 		else {
@@ -106,7 +120,7 @@ function menySlider() {
 
 
 		?>	
-
+	
 			
 			<li><a href="archive.php">player-archive</a></li>
 		

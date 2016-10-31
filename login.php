@@ -25,7 +25,7 @@ $_SESSION['id'] = $row['id'];
 $_SESSION['row'] = $row['first'];
 
 echo $_SESSION['id'];
-header("location: index.php");
+header("location: profile.php");
 }
 
 

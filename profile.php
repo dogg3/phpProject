@@ -40,28 +40,50 @@ $row = mysql_fetch_assoc($query);
 
 <?php include 'header.php'; ?>
 <a href="updateProfile.php">update profile</a>
-<div class="col-xs-12" style="background:white; padding-bottom:50px; padding-left:0px; padding-right: 0px;">
-<?php 
+<div class="col-xs-12" style="background:#e9ebee; padding-bottom:50px; padding-left:0px; padding-right: 0px;">
 
-
-
-	
-echo "
 
 
 
 <div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >
-	<a class='litenTextProfilRuta' href='updateProfile.php'><p id='litenTextProfilRuta'>update profile</p></a>
-	<div class='row'>
-		<div class='col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 profilbild'><div class='updatePP'>change pp</div><img src='profilePhotos/".$avatar."'></div>
-	
 
+	<div class='row' id='hej'>
+		
+		
+		<!--profilbilden -->
+		<div class='col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-1 profilbild'>
+		
+			<?php echo "<img src='profilePhotos/".$avatar."'> "; ?>
+		</div>
+
+		<!--namnet brevid profilbilden -->
+		<?php  echo " <h2 class='col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0 namnet'>".$row['first']." ".$row['last']."</h2> ";?>
+		<div class="col-md-2 col-xs-4 col-xs-offset-4 col-md-offset-0 updateProfile"><a class='litenTextProfilRuta' href='updateProfile.php'>Update Info</a></div>
 
 	</div>
+		
+	<ul class="profilNav">
+		<li>About</li>
+		<li>Carrer Stats</li>
+		<li>Academics</li>
+		<li>Accolades</li>
+		<li>Videos</li>
+			<li>Photos</li>
+	</ul>
+</div>
 
+
+
+
+
+<div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >
+	
 	<div class='row'>
 		<ul class='col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3'>
 	
+<?php
+
+echo "
 		<li>name:  ".$row['first']."</li>
 		<li>position:  ".$row['position']."</li>
 		<li>foot:  ".$row['foot']."</li>
@@ -73,6 +95,9 @@ echo "
 		</ul>
 	</div>
 
+	
+</div>
+<div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' style='padding-bottom:40px; padding-top:20px' >
 	<h4 style='text-align:center;' class='col-xs-6 col-xs-offset-3'>highlight video</h4>
 	<iframe class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2' style='padding:0px; height:50%;'
 src='".$row['video']."'>
@@ -86,8 +111,7 @@ src='".$row['video']."'>
 
 
 
-	<?php include 'footer.php' ?>
-
+	
 
 </body>
 </html>
