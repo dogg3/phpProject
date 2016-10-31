@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^profile?$ profile.php
+RewriteRule ^user/([0-9]+) user.php?id=$1

@@ -29,9 +29,19 @@ $query = mysql_query("SELECT * FROM anvand");
 <?php include 'header.php' ?>
 
 
-<div id="archive" class="container col-xs-12">
+<div id="archive" class=" col-xs-12">
 
-<a href=""></a>
+
+
+
+
+<form method="post" action="search.php" class="col-xs-12 col-md-8 col-md-offset-2">
+  <p style="font-variant: small-caps">last name</p> <input type="text" name="last" >
+  <p style="font-variant: small-caps">position</p> <input type="text" name="position" >
+  <!--position<input type="text" name="position" >-->
+  <input type="submit" value="search" name="submit">
+</form>
+
 
 <div class="col-xs-12 col-md-8 col-md-offset-2">
  <?php while ($row = mysql_fetch_assoc($query)) {
@@ -40,7 +50,7 @@ echo "
 <div style='padding:10px; ' class=' col-xs-offset-0 col-xs-4 col-md-3 col-md-offset-0'>
     <div style='padding: 0px;' class='bilderna col-xs-12'>
       <img style='width:100%; height:80%;' src='profilePhotos/".$row['file']."'>
-      <div style='text-align: center;'><a href='user.php?id=".$row['id']."'> ".$row['first']." ".$row['last']."</div>
+      <div id='bildText'><a href='user.php?id=".$row['id']."'> ".$row['first']." ".$row['last']."</div>
     </div>
   </div>
   ";

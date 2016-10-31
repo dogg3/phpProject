@@ -48,7 +48,7 @@ if (!$row['file']) {
              }
 
 echo "<div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >
-	<a class='litenTextProfilRuta' href='updateProfile.php'><p id='litenTextProfilRuta'>update profile</p></a>
+	
 	<div class='row'>
 		<div class='col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 profilbild'><div class='updatePP'>change pp</div><img src='profilePhotos/".$avatar."'></div>
 	
@@ -103,7 +103,7 @@ src='".$row['video']."'>
 
 ?>
 
-
+</div>
 	<?php include 'footer.php' ?>
 		</body>
 		</html>

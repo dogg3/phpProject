@@ -20,7 +20,7 @@
     <div class=" horahora col-xs-9 col-md-5 col-xs-offset-1">
         <h2>pl academy database</h2>
         <div class"col-md-2 col-xs-offset-1"><p>CSP Academy Camp är ett elit-läger som riktar sig till fotbollspelare som tar sin idrott på största allvar. Vi söker nuvarande college-athletets som vill förbereda sig för säsongen på bästa tänkbara sätt. Elit-spelare från andra ligor är också välkomna för att ta del av den hårda och förberande träningen som Academy campsen erbjuder. Sänd er info så hör vi vidare för betalning och mer info</p></div>
-        
+      
     </div>
 
 </body>

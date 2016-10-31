@@ -1,4 +1,22 @@
-	
+	<?php 
+
+mysql_connect("localhost", "root", "");
+mysql_select_db('logintest');
+if (isset($_SESSION['id'])) {
+$id = $_SESSION['id'];
+
+$query = mysql_query("SELECT * FROM anvand WHERE id='$id'");
+$row = mysql_fetch_assoc($query);
+
+if (!$row['file']) {
+        $avatar = "facebook-avatar.jpg";
+        }
+		else {
+             $avatar = $row['file'];
+             }
+
+             }
+	 ?>
 <!DOCTYPE html lang="en">
   <head>
  
@@ -11,7 +29,19 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="loginsql.css" rel="stylesheet">
+     <script type="text/javascript">
+	
 
+var kuk = 0;
+function menySlider() {
+		var meny = document.getElementById("meny");
+	if (kuk > 1){ kuk = 0};
+	if(kuk == 0){meny.style.marginLeft = "0px";};
+	if (kuk == 1) {meny.style.marginLeft = "-210px";};
+	kuk++;
+
+}
+</script>
 		</head>
 
 
@@ -20,28 +50,7 @@
 <div class="col-xs-12 header">
 		<!-- meny-php -->
 		<div class="visainlogg col-xs-2 col-sm-6 col-md-8 ">
-		<ul> 
-		<li><a href="index.php">home</a></li>
-			<li><a href="archive.php">player-archive</a></li>
-		
-		<?php if (!isset($_SESSION['id']))
-
-		{ echo "<li><a href='registrera.php'>register</a></li>
-		
-				
-		";} 
-
-		else {
-			echo "<li><a href='profile.php'>profile</a></li>";
-		}
-
-
-		?>	
-
-
-			
-					
-			</ul>
+		<div id="menyBild" onclick="menySlider()"><img src="menu.png"></div>
 		</div>
 
 
@@ -70,6 +79,45 @@
 
 		</div>
 
+<div class="menySlider" id="meny">
+		
+
+
+		<ul> 
+
+			<?php if (!isset($_SESSION['id']))
+
+		{ echo "<li><a href='registrera.php'>register</a></li>
+		<li><a href='index.php'>home</a></li>
+
+
+		";} 
+
+		else {
+			
+			echo "
+
+
+			<li id='firstLi'><img class='menyPP' src='profilePhotos/".$avatar."'> <a href='profile.php'>".$row['first']." ".$row['last']."</a></li>
+			<li> <a href='updateProfile.php'>update profile</a></li>
+
+			";
+		}
+
+
+		?>	
+
+			
+			<li><a href="archive.php">player-archive</a></li>
+		
+	
+<li style="border:1px solid #e0e0e0; width:105%; margin-left: -10%;"></li>
+
+			
+					
+			</ul>
+
+</div>
 
 		</body>
 		</html>

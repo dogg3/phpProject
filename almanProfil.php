@@ -56,18 +56,16 @@ echo "
 
 
 	</div>
-
 	<div class='row'>
 		<ul class='col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3'>
-	
-		<li>name:  ".$row['first']."</li>
-		<li>position:  ".$row['position']."</li>
-		<li>foot:  ".$row['foot']."</li>
-		<li>club/school: ".$row['club']."</li>
-		<li>year joining club: ".$row['startYearClub']."</li>
-		<li>games played: ".$row['gamesPlayed']."</li>
-		<li> goals scored: ".$row['goals']."</li>
-		<li>assists: ".$row['assists']."</li>
+			<li>name:  ".$row['first']."</li>
+			<li>position:  ".$row['position']."</li>
+			<li>foot:  ".$row['foot']."</li>
+			<li>club/school: ".$row['club']."</li>
+			<li>year joining club: ".$row['startYearClub']."</li>
+			<li>games played: ".$row['gamesPlayed']."</li>
+			<li> goals scored: ".$row['goals']."</li>
+			<li>assists: ".$row['assists']."</li>
 		</ul>
 	</div>
 

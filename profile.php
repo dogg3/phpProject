@@ -43,6 +43,9 @@ $row = mysql_fetch_assoc($query);
 <div class="col-xs-12" style="background:white; padding-bottom:50px; padding-left:0px; padding-right: 0px;">
 <?php 
 
+
+
+	
 echo "
 
 

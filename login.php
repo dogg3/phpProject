@@ -15,7 +15,8 @@ $result = mysqli_query($conn, $sql);
 
 if (!$row = mysqli_fetch_assoc($result)) {
 
-	echo "your username or password is incorrect";
+header("location: index.php");
+	
 	
 }
 

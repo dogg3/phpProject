@@ -11,7 +11,21 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="loginsql.css" rel="stylesheet">
+<script type="text/javascript">
+  
 
+    var imagecount = 1;
+  var total = 3;
+
+  function slide(x) {
+      var image = document.getElementById('img');
+    imagecount = imagecount + x;
+    if(imagecount > total){ imagecount = 1;}
+    if(imagecount < 1){ imagecount = total;}
+  
+    image.src = "img"+ imagecount + ".jpeg";
+}
+</script>
 
 <body>
 
@@ -24,6 +38,14 @@
         ill förbereda sig för säsongen på bästa tänkbara sätt. Elit-spelare från andra ligor är också välko
         mna för att ta del av den hårda och förberande träningen som Academy campsen erbjuder. Sänd er info så
          hör vi vidare för betalning och mer info</p></div>
+
+         <!---<div class="college">
+         <div id="leftholder" clas="left"><img onClick="slide(-1)" src="arrowleft.png"></div>
+      
+      <div id="rightholder" class="right"><img 
+        onClick="slide(1)" src="arrowright.png"></div>
+        </div>
+        -->
         
     </div>
 

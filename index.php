@@ -1,4 +1,6 @@
 
+
+<!DOCTYPE html>
 <!DOCTYPE html lang="en">
   <head>
   <?php  
@@ -30,6 +32,8 @@ session_start();
 <?php include 'content1.php' ?>
 <?php include 'content2.php' ?>
 <?php include 'content3.php' ?>
+
+
 
 
 
