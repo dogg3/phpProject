@@ -24,7 +24,7 @@ VALUES ('$first','$last', '$uid', '$pwd', '$position', '$foot', '$club', '$start
 
 $result = mysqli_query($conn, $sql);
 
-header("location: index.php");
+header("location: academics.php");
 
 
 

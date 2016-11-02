@@ -58,17 +58,22 @@ $row = mysql_fetch_assoc($query);
 
 		<!--namnet brevid profilbilden -->
 		<?php  echo " <h2 class='col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0 namnet'>".$row['first']." ".$row['last']."</h2> ";?>
-		<div class="col-md-2 col-xs-4 col-xs-offset-4 col-md-offset-0 updateProfile"><a class='litenTextProfilRuta' href='updateProfile.php'>Update Info</a></div>
+		<div class="col-md-2 col-xs-4 col-xs-offset-4 col-md-offset-0 updateProfile"><a class='litenTextProfilRuta' href='updateProfile.php'>Update Info</a>   </div>
 
 	</div>
 		
 	<ul class="profilNav">
-		<li>About</li>
-		<li>Carrer Stats</li>
+	
+		<img class="profilAnimations" style="height: 25px; width:25px;" src="animations/Games.png ">
+		<li>Carrer Stats </li>
+		<img class="profilAnimations" style="height: 25px; width:25px;" src="animations/College.png ">
 		<li>Academics</li>
+		<img class="profilAnimations" style="height: 25px; width:25px;" src="animations/accolades.png ">
 		<li>Accolades</li>
+		<img class="profilAnimations" style="height: 25px; width:25px;" src="animations/Videos.png ">
 		<li>Videos</li>
-			<li>Photos</li>
+		<img class="profilAnimations" style="height: 25px; width:25px;" src="animations/camera.png ">
+		<li>Photos</li>
 	</ul>
 </div>
 
@@ -79,24 +84,71 @@ $row = mysql_fetch_assoc($query);
 <div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >
 	
 	<div class='row'>
-		<ul class='col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3'>
+		<ul class='col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 kuken' >
 	
 <?php
 
 echo "
-		<li>name:  ".$row['first']."</li>
-		<li>position:  ".$row['position']."</li>
-		<li>foot:  ".$row['foot']."</li>
-		<li>club/school: ".$row['club']."</li>
-		<li>year joining club: ".$row['startYearClub']."</li>
-		<li>games played: ".$row['gamesPlayed']."</li>
-		<li> goals scored: ".$row['goals']."</li>
-		<li>assists: ".$row['assists']."</li>
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/Position.png '>
+		<li> ".$row['position']."</li>
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/foot.png '>
+		<li>  ".$row['foot']."</li>
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/School.png '>
+		<li> ".$row['club']."</li>
+		<br>
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/PenPaper.png '>
+		<li> Signed ".$row['startYearClub']."</li>
+
+		
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/games.png '>
+		
+		<li> ".$row['gamesPlayed']." Games</li>
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/Ball.png '>
+		<li>  ".$row['goals']." Goals</li>
+		
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SoocerCleat.png '>
+		<li> ".$row['assists']." Assists</li>
 		</ul>
 	</div>
-
-	
 </div>
+
+
+
+<div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >	
+	<div class='row'>
+		<ul class='col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 kuken' >
+	
+
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/AcademicYear.png '>
+		<li> ".$row['academicYear']."</li>
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/Highschoolsymbol.png '>
+		<li>  ".$row['highSchool']."</li>
+		
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/GPA.png  '>
+		 <li> ".$row['gpaHS']."</li>
+		<br>
+		
+
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SATMath.png '>
+		<li>  ".$row['satMath']."</li>
+
+		
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SatReading.png '>
+		
+		<li> ".$row['satReading']." </li>
+		
+
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SATWriting.png '>
+		<li>  ".$row['satWriting']." </li>
+		
+		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/TOEFL.png '>
+		<li>".$row['toefl']." </li>
+		</ul>
+	</div>
+</div>
+
+
+
 <div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' style='padding-bottom:40px; padding-top:20px' >
 	<h4 style='text-align:center;' class='col-xs-6 col-xs-offset-3'>highlight video</h4>
 	<iframe class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2' style='padding:0px; height:50%;'

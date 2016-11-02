@@ -36,7 +36,7 @@ if(strpos($url, 'error=uid')) {
 ?>
 
 
- <form class="regga col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4" action="signup.php" method="POST">
+ <form class="regga col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4" action="signup.php" method="POST" style="margin-top: 70px;">
           <fieldset><h2>player register</h2></fieldset>
             <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name="first" placeholder=
             firstname>

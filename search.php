@@ -28,7 +28,19 @@ mysql_select_db('logintest');
 
 <form method="post" class=" col-xs-12 col-md-8 col-md-offset-2" >
 	<p style="font-variant: small-caps">last name</p> <input type="text" name="last" >
-	<p style="font-variant: small-caps">position</p> <input type="text" name="position" >
+	<p style="font-variant: small-caps">position</p> <select   type="text" name="position" >
+              <option></option>
+              <option>goalkeeper</option>
+              <option>left defender</option>
+              <option>central defender</option>
+              <option>right defender</option>
+              <option>left midfield</option>
+              <option>center midfield</option>
+              <option>right midfield</option>
+              <option>left forward</option>
+              <option>central forward</option>
+              <option>right forward</option>
+            </select> 
 	<!--position<input type="text" name="position" >-->
 	<input type="submit" value="search" name="submit">
 </form>

@@ -37,7 +37,7 @@ $row = mysql_fetch_assoc($query);
 
           <form class= "regga col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3" action="upload_image.php" method="post" enctype="multipart/form-data">
                 <fieldset><h2>update your profile picture</h2></fieldset>
-          <div class="row">
+          <div class="row" style="display: flex; justify-content:center;" >
                <?php  
       if (!$row['file']) {
         $avatar = "facebook-avatar.jpg";
@@ -54,7 +54,7 @@ $row = mysql_fetch_assoc($query);
 
 
           
-            echo "<div class='col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 profilbild'><div class='updatePP'>change pp</div><img src='profilePhotos/".$avatar."'></div>";
+            echo "<div class=' profilbild'><div class='updatePP'>change pp</div><img src='profilePhotos/".$avatar."'></div>";
               ?>
           </div>
 
@@ -98,6 +98,65 @@ $row = mysql_fetch_assoc($query);
                         <button class="button col-xs-6 col-xs-offset-3" type="submit">update</button>
             
           </form>
+
+
+
+
+      
+          <form class="regga col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3" enctype="multipart/form-data" action="academics.inc.php" method="POST">
+            <fieldset><h2>update your academic profile</h2></fieldset>
+           
+            <h5>academic year</h5>
+          <select class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['academicYear']?>" name="academicYear" >
+              <option></option>
+              <option>Freshman High School</option>
+              <option>Sophmore High School</option>
+              <option>Junior High School</option>
+              <option>Senior High School</option>
+              <option>Freshman College</option>
+              <option>Sophmore College</option>
+              <option>Junior College</option>
+              <option>Senior College</option>
+            </select>
+
+            <h5>high school </h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['highSchool']?>" name="highSchool" >
+
+
+           <h5>gpa - high school </h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['gpaHS']?>" name="gpaHS" >
+
+            <h5> college *</h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['college']?>" name="college" >
+
+
+            
+
+            <h5>gpa - college * </h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['gpaCollege']?>" name="gpaCollege" >
+
+            <h5>sat - math score </h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['satMath']?>" name="satMath" >
+
+
+            <h5>sat - reading score </h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['satReading']?>" name="satReading" >
+
+
+            <h5>sat - writing score </h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['satWriting']?>" name="satWriting" >
+
+             <h5>toefl -  score **</h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" value="<?php echo $row['toefl']?>" name="toefl" >
+
+        <h5 style="margin-top: ">* if applicable</h5>
+        <h5>** only for none us citizens</h5>
+            <button class="button col-xs-6 col-xs-offset-3" type="submit">update</button>
+            
+          </form>
+
+         
+        
 
           </div>
         

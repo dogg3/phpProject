@@ -101,9 +101,10 @@ function menySlider() {
 
 			<?php if (!isset($_SESSION['id']))
 
-		{ echo "<li id='firstLi'><a href='registrera.php'>register</a></li><br>
-		<li><a href='index.php'>home</a></li>
+		{ echo "	<li id='firstLi' ><img class='menyPP' src='animations/home.png'> <a href='index.php'>home</a></li>
 
+		<li style='margin-bottom:0px;'><img class='menyPP' src='animations/PenPaper.png'> <a href='registrera.php'>register</a></li><br>
+	
 <br>
 		";} 
 
@@ -112,8 +113,8 @@ function menySlider() {
 			echo "
 
 
-			<li id='firstLi'><img class='menyPP' src='profilePhotos/".$avatar."'> <a href='profile.php'>".$row['first']." ".$row['last']."</a></li>
-			<li> <a href='updateProfile.php'>update profile</a></li>
+			<li id='firstLi'><img class='menyPP' src='profilePhotos/".$avatar."'> <a style='font-size:14px; font-variant:none;' href='profile.php'>".$row['first']." ".$row['last']."</a></li>
+			<li> <img style='width:3px;' class='menyPP' src='animations/RedPen.png '> <a href='updateProfile.php'>update profile</a></li>
 
 			";
 		}
@@ -122,7 +123,7 @@ function menySlider() {
 		?>	
 	
 			
-			<li><a href="archive.php">player-archive</a></li>
+			<li><img class="menyPP" src="animations/archives.png "> <a href="archive.php">player-archive</a></li>
 		
 	
 <li style="border:1px solid #e0e0e0; width:105%; margin-left: -10%;"></li>

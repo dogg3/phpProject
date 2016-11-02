@@ -412,6 +412,10 @@ img {
 color:black;
 }
 
+.kuken li {
+	margin-bottom: 30px;
+}
+
 
 
 #menyBild {
@@ -526,7 +530,28 @@ text-align: center;
 .profilNav li {
 	display: inline;
 	margin-right: 30px;	
+	margin-left: 0px;
 }
+
+.profilNav {
+	padding-left:20px;
+}
+
+.kuken {
+	padding-left: 35px;
+}
+
+
+
+.kuken li {
+	display: inline;
+		margin-right: 35px;	
+		margin-left: 0px;
+		
+		line-height: 120px;
+}
+
+
 
 
 
@@ -541,5 +566,16 @@ text-align: center;
 	letter-spacing: 0.8px;
 	font-size: 10px;
 }
+
+.profilNav li {
+
+	margin-bottom: 25px;
+}
+
+.profilNav {
+	padding-left: 0px;
+
+}
+
 
 }
