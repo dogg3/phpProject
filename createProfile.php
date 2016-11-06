@@ -41,13 +41,13 @@ $row = mysql_fetch_assoc($query);
               <option></option>
               <option>goalkeeper</option>
               <option>left defender</option>
-              <option>center defender</option>
+              <option>central defender</option>
               <option>right defender</option>
               <option>left midfield</option>
               <option>center midfield</option>
               <option>right midfield</option>
               <option>left forward</option>
-              <option>center forward</option>
+              <option>central forward</option>
               <option>right forward</option>
             </select>
             <h5>foot</h5>

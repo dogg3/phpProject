@@ -6,6 +6,8 @@ $first = $_POST['first'];
 $last = $_POST['last'];
 $uid = $_POST['uid'];
 $pwd = $_POST['pwd'];
+$years = $_POST['years'];
+$country = $_POST['country'];
 
 //error handling
 //check if it's empty
@@ -31,6 +33,24 @@ if (empty($pwd)) {
 
 }
 
+if (empty($pwd)) {
+	header("location: registrera.php?error=empty");
+	exit();
+
+}
+
+if (empty($years)) {
+	header("location: registrera.php?error=empty");
+	exit();
+
+}
+
+if (empty($country)) {
+	header("location: registrera.php?error=empty");
+	exit();
+
+}
+
 //error handling end
 //check if it's empty end
 
@@ -51,6 +71,8 @@ else {
 		$_SESSION['last'] = $_POST['last'];
 		$_SESSION['uid'] = $_POST['uid'];
 		$_SESSION['pwd'] = $_POST['pwd'];
+		$_SESSION['country'] = $_POST['country'];
+		$_SESSION['years'] = $_POST['years'];
 
 		header("location: createProfile.php");
 

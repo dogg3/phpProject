@@ -24,121 +24,118 @@ var imagecount = 1;
     imagecount = imagecount + 1;
     if(imagecount > total){ imagecount = 1;}
     if(imagecount < 1){ imagecount = total;}
-    image.style.backgroundImage = 'url("studentbild' + imagecount + '.jpg")';
+    image.style.backgroundImage = 'url("stadium' + imagecount + '.jpg")';
     
 
-//knappen
-var knappen = document.getElementsByClassName("button1");
+},4000);
+
+
+
+
+
+
+
+
+
+
+
+
+function textFlytt() {
+
+var tjo = document.getElementById("firstText");
+var knappar = document.getElementById("knappar");
+tjo.style.color = "white";
+tjo.style.paddingTop = "175px";
+tjo.style.transition = "padding 2s";
+tjo.style.visibility = "visible";
+knappar.style.marginTop = "260px";
+
+}
+   var imagecount = 1;
+  var total = 3;
+
+ window.setInterval(function textFlytt2() {
+    
+      var image = document.getElementById('containerBild');
+ 
+    imagecount = imagecount + 1;
+    if(imagecount > total){ imagecount = 1;}
+    if(imagecount < 1){ imagecount = total;}
+    
+
+
+
+var tjo = document.getElementById("firstText");
+var knappar = document.getElementById("knappar");
+var regBox = document.getElementById("firstRegBox");
+    
+    if (imagecount == 1) {
+
+tjo.innerHTML = "create your profile now <br> get seen by coaches !";
+regBox.innerHTML = "register";
+
+}
+
+
+    if (imagecount == 2) {
+
+
+
+
+tjo.innerHTML = "search for players <br> in player archive";
+regBox.innerHTML = "player archive";
+tjo.style.paddingRight ="200px;"
+
+
+
+
+}
+
     if (imagecount == 3) {
-knappen[2].style.backgroundColor = "black";
-knappen[2].style.color = "black";
-knappen[1].style.backgroundColor = "white";
-knappen[1].style.color = "white";
-knappen[0].style.backgroundColor = "white";
-knappen[0].style.color = "white";
-
-}
-
-else if (imagecount == 2) {
-knappen[1].style.backgroundColor = "black";
-knappen[1].style.color = "black";
-knappen[2].style.backgroundColor = "white";
-knappen[2].style.color = "white";
-knappen[0].style.backgroundColor = "white";
-knappen[0].style.color = "white";
-
-}
-
-else if (imagecount == 1) {
-knappen[0].style.backgroundColor = "black";
-knappen[0].style.color = "black";
-knappen[1].style.backgroundColor = "white";
-knappen[1].style.color = "white";
-knappen[2].style.backgroundColor = "white";
-knappen[2].style.color = "white";
-
-}
-},3000);
 
 
-
-
-
-
-
-  
-//byte av bilden när man trycker på knappen
-function bild(x) {
-
-  var bild1 = document.getElementById("containerBild");
-
-  bild1.style.backgroundImage = 'url("studentbild'+ x +'.jpg")';
-
-    var knappen = document.getElementsByClassName("button");
-
-
-if (x == 3) {
-knappen[2].style.backgroundColor = "black";
-knappen[2].style.color = "black";
-knappen[1].style.backgroundColor = "white";
-knappen[1].style.color = "white";
-knappen[0].style.backgroundColor = "white";
-knappen[0].style.color = "white";
-
-}
-
-else if (x == 2) {
-knappen[1].style.backgroundColor = "black";
-knappen[1].style.color = "black";
-knappen[2].style.backgroundColor = "white";
-knappen[2].style.color = "white";
-knappen[0].style.backgroundColor = "white";
-knappen[0].style.color = "white";
-
-}
-
-else if (x == 1) {
-knappen[0].style.backgroundColor = "black";
-knappen[0].style.color = "black";
-knappen[1].style.backgroundColor = "white";
-knappen[1].style.color = "white";
-knappen[2].style.backgroundColor = "white";
-knappen[2].style.color = "white";
+tjo.innerHTML = "complete guide to get recruited";
+regBox.innerHTML = "guide";
 
 }
 
 
 
+},4000);
 
-}
+
+
+     
 
      </script>
     </head>
 
 
-<body>
+<body  >
 
 
 <div class="container col-xs-12">
 
 
 
-		<?php  
+		 
 
 	
-					echo "<div id='containerBild' class='containerBild col-xs-12 col-xs-offset-0 col-md-offset-0'>
+					<div  id='containerBild' class='containerBild col-xs-12 col-xs-offset-0 col-md-offset-0'>
           
-          <div id='knappar'>
-
-  <button onclick='bild(1)' value='tjo' class='button1' id='button1'></button>
+<div class="row">
+          <h3 class='col-md-6 col-md-offset-3' id='firstText'   class='firstText'>create your profile now <br> get seen by coaches !</h3>
+</div> 
   
-    <button  onclick='bild(2)' class='button1' id='button2'></button>
-    <button onclick='bild(3)''  class='button1' id='button3'></button>
-</div>
 
-          </div>";;
+  <div id="firstRegBox" class='col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-5'><a href="registrera.php" style="color: white; ">register</a></div>       
+
+
+         
+
+          </div>
 	
-			?>
+			
 			</div>
 
 

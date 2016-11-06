@@ -63,33 +63,17 @@ function menySlider() {
 
 <div class="col-xs-12 header">
 		<!-- meny-php -->
-		<div class="visainlogg col-xs-2 col-sm-6 col-md-8 ">
-		<div id="menyBild" onclick="menySlider()"><img src="menu.png"></div>
+		
+		<div class="col-xs-2 col-md-2" >
+			<a href="index.php"><img style="height:40px; width:40px; margin-top: 5px; " src="playerlotLogoLiten.png"></a>
+
+		</div>
+		<div class="pull-right" style="padding-right: 20px; margin-top: 5px;" class="visainlogg col-xs-2 col-xs-offset-8 col-md-offset-8 ">
+		<div  id="menyBild" onclick="menySlider()"><img src="menu.png" style="height:40px; width:40px;"></style></div>
 		</div>
 
 
 
-<?php 
-		if (isset($_SESSION['id'])) {
-				
-								echo "<form class='loggain col-xs-6 col-xs-offset-0  col-sm-4 col-md-3' action='logout.php' method='POST'>
-		
-				<button class='col-xs-6 col-sm-4 col-md-4'  class='button' type='submit'>log out</button>
-	 
-</form>";
-	echo $_SESSION['row']; 
-				echo " is logged in";
-			}
-			
-			else {
-	echo "<form class='loggain col-xs-10  col-sm-6 col-md-4 ' action='login.php' method='POST'>
-						<input class='col-xs-4'  type='text' name='uid' placeholder='username'>
-						<input class='col-xs-4'  type='password' name='pwd' placeholder='password'>
-						<button class='col-xs-3'  class='button' type='submit'>log in</button>
-					</form>";
-
-			}
-?>
 
 		</div>
 
@@ -101,21 +85,39 @@ function menySlider() {
 
 			<?php if (!isset($_SESSION['id']))
 
-		{ echo "	<li id='firstLi' ><img class='menyPP' src='animations/home.png'> <a href='index.php'>home</a></li>
+		{ echo "	
+<form  action='login.php' method='POST' style='padding-top:20px;'>
+					
+
+						<input   type='text' name='uid' placeholder='username'>
+						<input   type='password' name='pwd' placeholder='password'><br>
+						<button class='logitout col-xs-10 col-sm-10 col-md-10'  type='submit'>log in </button>
+					</form>
+
+
+		<li id='firstLi' ><img class='menyPP' src='animations/home.png'> <a href='index.php'>home</a></li>
 
 		<li style='margin-bottom:0px;'><img class='menyPP' src='animations/PenPaper.png'> <a href='registrera.php'>register</a></li><br>
-	
-<br>
+	<li style='margin-top:20px;'><img class='menyPP' src='animations/archives.png '> <a href='archive.php'>player-archive</a></li>
+
+
+
+
 		";} 
 
 		else {
 			
 			echo "
 
-
-			<li id='firstLi'><img class='menyPP' src='profilePhotos/".$avatar."'> <a style='font-size:14px; font-variant:none;' href='profile.php'>".$row['first']." ".$row['last']."</a></li>
-			<li> <img style='width:3px;' class='menyPP' src='animations/RedPen.png '> <a href='updateProfile.php'>update profile</a></li>
-
+		<li id='firstLi'><img class='menyPP' src='profilePhotos/".$avatar."'> <a style='font-size:14px; font-variant:none;' href='profile.php'>".$row['first']." ".$row['last']."</a></li>
+			
+			<li style=''> <img style='width:3px;' class='menyPP' src='animations/RedPen.png '> <a href='updateProfile.php'>update profile</a></li>
+<li><img class='menyPP' src='animations/archives.png '> <a href='archive.php'>player-archive</a></li>
+		<form action='logout.php' method='POST' style='margin-bottom:20px;'>
+		
+				<button class='logitout col-xs-10 col-sm-10 col-md-10'  class='button' type='submit'>log out</button>
+	 
+</form>
 			";
 		}
 
@@ -123,10 +125,8 @@ function menySlider() {
 		?>	
 	
 			
-			<li><img class="menyPP" src="animations/archives.png "> <a href="archive.php">player-archive</a></li>
-		
-	
-<li style="border:1px solid #e0e0e0; width:105%; margin-left: -10%;"></li>
+			
+
 
 			
 					
@@ -136,4 +136,7 @@ function menySlider() {
 
 		</body>
 		</html>
+
+		
+
 	

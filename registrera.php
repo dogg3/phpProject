@@ -1,4 +1,4 @@
-  <?php  
+ <?php  
 session_start();
 ?>
 
@@ -38,9 +38,28 @@ if(strpos($url, 'error=uid')) {
 
  <form class="regga col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4" action="signup.php" method="POST" style="margin-top: 70px;">
           <fieldset><h2>player register</h2></fieldset>
-            <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name="first" placeholder=
-            firstname>
-            <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name='last' placeholder='lastname'>
+           
+            <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name="first" placeholder='first name'>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name='last' placeholder='last name'>
+             <h5>country</h5>
+            <select class="col-xs-12 col-md-10 col-md-offset-1" type="text" name="country" >
+              <option></option>
+              <option>USA</option>
+              <option>Canada</option>
+              <option>Sweden</option>
+              <option>Denmark</option>
+              <option>Norway</option>
+              <option>Iceland</option>
+              <option>Finland</option>
+              <option>England</option>
+              <option>Germany</option>
+              <option>Italy</option>
+            </select>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name='years' placeholder='age'>
+          
+
+
+          
             <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name='uid' placeholder='username'>
             <input class="col-xs-12 col-md-10 col-md-offset-1" type="password" name='pwd' placeholder='password'>
             <button class="button col-xs-6 col-xs-offset-3" type="submit">sign up</button>

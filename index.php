@@ -17,7 +17,7 @@ session_start();
      <link href="loginsql.css" rel="stylesheet">
 
 
-<body>
+<body onload='textFlytt()'>
 
 	<!-- header -->
 		<!-- du är inloggad-php -->
