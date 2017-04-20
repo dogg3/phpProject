@@ -24,7 +24,11 @@ else {
 		$img = $row['file'];
 		$position = $row['position'];
 		$id = $row['id'];
+<<<<<<< Updated upstream
 $output .= '<div><img class="searchBild" src="profilePhotos/'.$img.'"><a href="">'.$fname.' '.$lname.'</a><br><div style="color:black;" class="searchPos">'.$position.'</div></div><br>';
+=======
+$output .= '<div><img class="searchBild" src="profilePhotos/'.$img.'"><a href="user.php?id='.$row['id'].'">'.$fname.' '.$lname.'</a><br><div style="color:black;" class="searchPos">'.$position.'</div></div><br>';
+>>>>>>> Stashed changes
 
 	}
 }

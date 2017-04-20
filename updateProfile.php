@@ -36,6 +36,19 @@ $row = mysql_fetch_assoc($query);
           
 
           <form class= "regga col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3" action="upload_image.php" method="post" enctype="multipart/form-data">
+                <fieldset><h2>update your video</h2></fieldset>
+       
+
+              <input class="col-xs-12" type="hidden" name="MAX_FILE_SIZE" value="6500000" />
+              <input class="filehora col-xs-8 col-md-4 col-md-offset-4 col-xs-offset-2" type="file" name="image" value="chose image" placholder="chose image"/>
+              <input class="col-xs-4 col-xs-offset-4" type="submit" name="upload" value="upload" />
+              </form>
+             
+
+
+
+
+ <form class= "regga col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3" action="upload_image.php" method="post" enctype="multipart/form-data">
                 <fieldset><h2>update your profile picture</h2></fieldset>
           <div class="row" style="display: flex; justify-content:center;" >
                <?php  
@@ -58,11 +71,14 @@ $row = mysql_fetch_assoc($query);
               ?>
           </div>
 
-              <input class="col-xs-12" type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+              <input class="col-xs-12" type="hidden" name="MAX_FILE_SIZE" value="6500000" />
               <input class="filehora col-xs-8 col-md-4 col-md-offset-4 col-xs-offset-2" type="file" name="image" value="chose image" placholder="chose image"/>
               <input class="col-xs-4 col-xs-offset-4" type="submit" name="upload" value="upload" />
               </form>
              
+
+
+
 
 
 

@@ -34,11 +34,13 @@ $row = mysql_fetch_assoc($query);
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
      <link href="loginsql.css" rel="stylesheet">
-
+</head>
 
 <body>
 
 <?php include 'header.php'; ?>
+
+<div class="col-xs-12" style="background:#e9ebee; padding-bottom:0px; padding-left:0px; padding-right: 0px;">
 
 <div class="col-xs-12" style="background:#e9ebee; padding-bottom:0px; padding-left:0px; padding-right: 0px;">
 
@@ -71,7 +73,10 @@ $row = mysql_fetch_assoc($query);
 	</div>
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 		<br>
 
 <div class="row fint"  style="background-color: rgb(70, 128, 132);;">

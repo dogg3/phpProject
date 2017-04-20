@@ -36,6 +36,55 @@ $row = mysql_fetch_assoc($query);
      <link href="loginsql.css" rel="stylesheet">
 
 
+<<<<<<< Updated upstream
+=======
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+     <script type="text/javascript">
+
+
+//$(document).ready(function(){
+//	console.log("ready");
+//	$("#season").css("visibility", "hidden");
+
+//});
+
+$(document).ready(function() {
+
+	var isDirty = false;
+
+
+
+
+
+	$('select').on('change', function() {
+		
+
+	
+		var year = $(this).val();
+			$.ajax({
+				method: "post",
+				url: "season.inc.php",
+				data: {year:year}
+			})
+			.done(function(data){
+				$("#season").html(data);
+			})
+		
+  		
+		});
+
+$('#season').load('season.inc.standard.php');
+
+});
+
+
+
+</script>
+
+     </head>
+
+
+>>>>>>> Stashed changes
 <body>
 
 <?php include 'header.php'; ?>
@@ -44,7 +93,11 @@ $row = mysql_fetch_assoc($query);
 
 
 
+<<<<<<< Updated upstream
 <div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >
+=======
+<div class='profilruta col-xs-12 col-md-10 col-md-offset-1 col-xs-offset-0' >
+>>>>>>> Stashed changes
 
 	<div class='row' id='hej'>
 		
@@ -103,10 +156,17 @@ $row = mysql_fetch_assoc($query);
 
 
 
+<<<<<<< Updated upstream
 <div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >
 	
 	<div class='row'>
 		<ul class='col-xs-12 col-md-12 col-md-offset-0 kuken' >
+=======
+<div class='profilruta col-xs-12 col-md-10 col-md-offset-1 col-xs-offset-0' >
+	
+	
+	<div id="innerTest">
+>>>>>>> Stashed changes
 	
 <?php
 mysql_connect("localhost", "root", "");
@@ -120,7 +180,11 @@ while ($row = mysql_fetch_assoc($query)) {
 if ($rader = mysql_num_rows($query)) {
 
 //	diven
+<<<<<<< Updated upstream
 	echo "<div class='col-xs-12 col-md-5 profildata	' style=' border:1px solid black;'><h3 id='kkk'>player data</h3>";
+=======
+	echo "<div class='col-xs-12 col-md-5 profildata	'><h3 id='kkk'>player data</h3><div class='playerDataInner'>";
+>>>>>>> Stashed changes
 	
 //player data visa om det finns value i dem
 	if ($row['first']) {
@@ -154,7 +218,11 @@ if ($rader = mysql_num_rows($query)) {
 	
 
 
+<<<<<<< Updated upstream
 	echo "</div>";
+=======
+	echo "</div></div>";
+>>>>>>> Stashed changes
 }
 
 
@@ -165,8 +233,218 @@ if ($rader = mysql_num_rows($query)) {
 
 ?>
 
+<<<<<<< Updated upstream
 
 				</div>
+=======
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<div class="seasonContainer col-xs-12 col-md-5 ">
+<h3 class="stats">season stats</h3>
+	<select class="col-xs-10 col-xs-push-1 col-md-10 col-md-push-1">
+		  <option value="2016">2016</option>
+		  <option value="2015">2015</option>
+		  <option value="2014">2014</option>
+		 
+</select>
+<div  id="season" class="  col-xs-12  col-md-12 ">
+
+
+
+		  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+<div class='profilruta col-xs-12 col-md-10 col-md-offset-1 col-xs-offset-0' >
+
+<div>
+
+<?php 
+mysql_connect("localhost", "root", "");
+mysql_select_db('logintest');
+$id = $_SESSION['id'];
+$query = mysql_query("SELECT * FROM accolades WHERE user='$id'");
+
+
+while ($row6 = mysql_fetch_assoc($query)) {
+
+
+
+	if ($rader = mysql_num_rows($query)) {
+
+			?>
+		<div class="col-md-12 col-md-offset-0 accoladesContainer ">
+			<h2 style="text-align: center;">accolades</h2>
+			<div id="accoladesInner" >
+			<?php
+
+
+			
+
+			if ($row6['acco1']) {
+				?>
+				<div class="accoladesDiv">
+					<h3>
+				<?php 
+					echo $row6['acco1year']
+				 ?>
+					 </h3>
+					<?php
+					echo $row6['acco1']
+					?>
+					</div>
+			 	<?php 
+				;}
+
+				if ($row6['acco2']) {
+				?>
+				<div class="accoladesDiv">
+					<h3>
+				<?php 
+					echo $row6['acco2year']
+				 ?>
+					 </h3>
+					<?php
+					echo $row6['acco2']
+					?>
+					</div>
+			 	<?php 
+				;}
+				if ($row6['acco3']) {
+				?>
+				<div class="accoladesDiv">
+					<h3>
+				<?php 
+					echo $row6['acco3year']
+				 ?>
+					 </h3>
+					<?php
+					echo $row6['acco3']
+					?>
+					</div>
+			 	<?php 
+				;}
+
+
+				
+				?>
+
+			
+
+			</div>
+		</div>
+</div>
+
+</div>
+
+<div class='profilruta col-xs-12 col-md-10 col-md-offset-1 col-xs-offset-0' >
+
+
+<?php 
+mysql_connect("localhost", "root", "");
+mysql_select_db('logintest');
+$id = $_SESSION['id'];
+$query = mysql_query("SELECT * FROM abour WHERE user='$id'");
+
+
+while ($row4 = mysql_fetch_assoc($query)) {
+
+
+
+if ($rader = mysql_num_rows($query)) {
+
+	?>
+<div style="border: 1px solid black; background:#5aabb1;" class="col-md-5">
+	<h2>Who am I?</h2>
+	<?php
+
+
+if ($row4['about']) {
+		echo $row4['about']
+	;}
+
+
+
+?>
+
+</div>
+
+<?php
+}
+
+}
+?>
+
+
+
+<?php 
+mysql_connect("localhost", "root", "");
+mysql_select_db('logintest');
+$id = $_SESSION['id'];
+$query = mysql_query("SELECT * FROM reko WHERE user='$id'");
+
+
+while ($row5 = mysql_fetch_assoc($query)) {
+
+
+
+	if ($rader = mysql_num_rows($query)) {
+
+			?>
+		<div style="border: 1px solid black; background:#5aabb1;" class="col-md-5 col-md-push-1">
+			<h2>Scout report</h2>
+			<?php
+
+
+			if ($row5['rekomendation']) {
+				echo $row5['rekomendation']
+			;}
+
+			if ($row5['namn']) {
+				?>
+				<h3>
+				<?php
+				echo $row5['namn']
+				?>
+				</h3>
+			 	<?php 
+				;}
+
+				if ($row5['club']) {
+				?>
+				<h3>
+				<?php
+				echo $row5['club']
+				?>
+				</h3>
+			 	<?php 
+				;}
+				?>
+
+				
+
+		</div>
+
+		<?php
+	}
+
+}
+?>
+
+		<?php
+	}
+
+}
+?>
+
+	</div>		
+>>>>>>> Stashed changes
 
 
 
