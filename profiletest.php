@@ -106,80 +106,66 @@ $row = mysql_fetch_assoc($query);
 <div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >
 	
 	<div class='row'>
-		<ul class='col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 kuken' >
+		<ul class='col-xs-12 col-md-12 col-md-offset-0 kuken' >
 	
 <?php
+mysql_connect("localhost", "root", "");
+mysql_select_db('logintest');
+$id = $_SESSION['id'];
+$query = mysql_query("SELECT * FROM anvand WHERE id='$id'");
 
 
-echo "
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/Position.png '>
-		<li> ".$row['position']."</li>
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/foot.png '>
-		<li>  ".$row['foot']."</li>
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/School.png '>
-		<li> ".$row['club']."</li>
-		<br>
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/PenPaper.png '>
-		<li> Signed ".$row['startYearClub']."</li>
+while ($row = mysql_fetch_assoc($query)) {
 
-		
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/games.png '>
-		
-		<li> ".$row['gamesPlayed']." Games</li>
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/Ball.png '>
-		<li>  ".$row['goals']." Goals</li>
-		
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SoocerCleat.png '>
-		<li> ".$row['assists']." Assists</li>
-		</ul>
-	</div>
-</div>
+if ($rader = mysql_num_rows($query)) {
 
+//	diven
+	echo "<div class='col-xs-12 col-md-5 profildata	' style=' border:1px solid black;'><h3 id='kkk'>player data</h3>";
+	
+//player data visa om det finns value i dem
+	if ($row['first']) {
+		echo "<h5>Name: ".$row['first']." ".$row['last']."<br>"
+	;}
+	if ($row['country']) {
+		echo "<h5>Nationality: ".$row['country']."<br>"
+	;}
+	if ($row['years']) {
+		echo "<h5>Born/age: ".$row['years']." (".$_age.")<br>"
+	;}
+	if ($row['age']) {
+		echo "<h5>Age: ".$row['age']."<br>"
+	;}
 
-
-<div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' >	
-	<div class='row'>
-		<ul class='col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0 kuken' >
+	if ($row['height']) {
+		echo "<h5>Height: ".$row['height']."<br>"
+	;}
+		if ($row['weight']) {
+		echo "<h5>Weight: ".$row['weight']."<br>"
+	;}
+		if ($row['foot']) {
+		echo "<h5>Foot: ".$row['foot']."<br>"
+	;}
+		if ($row['club']) {
+		echo "<h5>Club: ".$row['club']."<br>"
+	;}
+	if ($row['startYearClub']) {
+		echo "<h5>In the team since: ".$row['startYearClub']."<br>"
+	;}
 	
 
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/AcademicYear.png '>
-		<li> ".$row['academicYear']."</li>
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/Highschoolsymbol.png '>
-		<li>  ".$row['highSchool']."</li>
-		
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/GPA.png  '>
-		 <li> ".$row['gpaHS']."</li>
-		<br>
-		
 
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SATMath.png '>
-		<li>  ".$row['satMath']."</li>
-
-		
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SatReading.png '>
-		
-		<li> ".$row['satReading']." </li>
-		
-
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/SATWriting.png '>
-		<li>  ".$row['satWriting']." </li>
-		
-		<img class='profilAnimations' style='height: 45px; width:45px;' src='animations/TOEFL.png '>
-		<li>".$row['toefl']." </li>
-		</ul>
-	</div>
-</div>
+	echo "</div>";
+}
 
 
 
-<div class='profilruta col-xs-12 col-md-8 col-md-offset-2 col-xs-offset-0' style='padding-bottom:40px; padding-top:20px' >
-	<h4 style='text-align:center;' class='col-xs-6 col-xs-offset-3'>highlight video</h4>
-	<iframe class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2' style='padding:0px; height:50%;'
-src='".$row['video']."'>
-</iframe>
-</div>";
+
+
+}
 
 ?>
+
+
 				</div>
 
 

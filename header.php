@@ -47,9 +47,29 @@ function menySlider() {
 
 
 }
+
+
 </script>
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+     <script type="text/javascript">
+  function searchq() {
+  var searchTxt = $("input[name='search']").val();
+if ($.trim(searchTxt) != '') {
+  $.post("searchit.inc.php", {searchVal: searchTxt}, function(output){
+var rutan = document.getElementById("output");
+	rutan.style.visibility = "visible";
+$("#output").html(output);
+  });
+}
+}
 
+function stefan() {
+	var rutan = document.getElementById("output");
+	rutan.style.visibility = "hidden";
+}
+
+</script>
 
 
 
@@ -59,25 +79,36 @@ function menySlider() {
 		</head>
 
 
-<body onload="inlogg()">
+<body onload="inlogg()" onclick="stefan()">
 
 <div class="col-xs-12 header">
 		<!-- meny-php -->
 		
-		<div class="col-xs-2 col-md-2" >
+		<div class="col-xs-2 col-md-1" >
 			<a href="index.php"><img style="height:40px; width:40px; margin-top: 5px; " src="playerlotLogoLiten.png"></a>
 
 		</div>
-		<div class="pull-right" style="padding-right: 20px; margin-top: 5px;" class="visainlogg col-xs-2 col-xs-offset-8 col-md-offset-8 ">
-		<div  id="menyBild" onclick="menySlider()"><img src="menu.png" style="height:40px; width:40px;"></style></div>
+		<div class="col-md-4 pull-right" style="padding-right: 20px; margin-top: 5px;" class="visainlogg col-xs-2 col-xs-offset-8 col-md-offset-8 ">
+		<div  id="menyBild"  onclick="menySlider()"><img src="menu.png" style="float:right; height:40px; width:40px;"></style></div>
 		</div>
 
+<form style="border:0px;margin-left:10px;margin-bottom: 0px; padding:0px; margin-top: 10px; " class=" col-xs-7 col-md-4"   action='searchit.inc.php' method='POST'>
+						     
 
+						<input style=" margin-top:2px;padding:3px; background-color:#6c8284;" class="searchBar col-xs-12"  onkeydown="searchq()" type='text' name='search' placeholder='Search Players'>
+						
+						
+</form>
+<br>
+<div style="    box-shadow: 1px 2px 5px black; margin-left:10px;background: white; padding-left:40px;  margin-top: 0px; border-left: 1px solid black; border-right:1px solid black; border-bottom:1px solid black; border-top:0px;"
+ id="output" class="  col-xs-7 col-md-4 ">
+     
+</div>
 
 
 		</div>
 
-<div class="menySlider" id="meny">
+<div class=" menySlider" id="meny">
 		
 
 

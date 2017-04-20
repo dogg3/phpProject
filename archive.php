@@ -2,9 +2,28 @@
 session_start();
 mysql_connect("localhost", "root", "");
 mysql_select_db('logintest');
+if(isset($_SESSION['id'])){
+$id = $_SESSION['id'];
+}
+
+
 
 
 $query = mysql_query("SELECT * FROM anvand");
+
+$num_rows = mysql_num_rows($query);
+
+
+
+
+
+
+
+
+//make our session
+
+
+
 
 ?>
 
@@ -54,14 +73,30 @@ $query = mysql_query("SELECT * FROM anvand");
   <input type="submit" value="search" name="submit">
 </form>
 
-
 <div class="col-xs-12 col-md-8 col-md-offset-2">
- <?php while ($row = mysql_fetch_assoc($query)) {
+ <?php 
+
+$query = mysql_query("SELECT * FROM anvand");
+
+$num_rows = mysql_num_rows($query);
+
+
+$row = mysql_fetch_assoc($query);
+
+
+ while ($row = mysql_fetch_assoc($query)) {
+
+   if (!$row['file']) {
+        $avatar = "facebook-avatar.jpg";
+        }
+    else {
+             $avatar = $row['file'];
+             }
 
 echo "
 <div style='padding:10px; ' class=' col-xs-offset-0 col-xs-4 col-md-3 col-md-offset-0'>
     <div style='padding: 0px;' class='bilderna col-xs-12'>
-      <img style='width:100%; height:80%;' src='profilePhotos/".$row['file']."'>
+      <img style='width:100%; height:80%;' src='profilePhotos/".$avatar."'>
       <div id='bildText'><a href='user.php?id=".$row['id']."'> ".$row['first']." ".$row['last']."</div>
     </div>
   </div>

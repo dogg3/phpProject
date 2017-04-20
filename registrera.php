@@ -55,7 +55,8 @@ if(strpos($url, 'error=uid')) {
               <option>Germany</option>
               <option>Italy</option>
             </select>
-            <input class="col-xs-12 col-md-10 col-md-offset-1" type="text" name='years' placeholder='age'>
+            <h5>birth date</h5>
+            <input class="col-xs-12 col-md-10 col-md-offset-1" type="date" name='years' placeholder='age'>
           
 
 

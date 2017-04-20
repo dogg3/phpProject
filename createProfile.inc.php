@@ -10,6 +10,7 @@ $years = $_SESSION['years'];
 $country = $_SESSION['country'];
 
 
+
 $position = $_POST['position'];
 $foot = $_POST['foot'];
 $club = $_POST['club'];
@@ -21,8 +22,9 @@ $rewards = $_POST['rewards'];
 $video = $_POST['video'];
 
 
+
 $sql = "INSERT INTO anvand (first, last, uid, pwd, position, foot, club,startYearClub, gamesPlayed, goals, assists, rewards, video, years, country)
-VALUES ('$first','$last', '$uid', '$pwd', '$position', '$foot', '$club', '$startYearClub', '$gamesPlayed', '$goals', '$assists','$rewards', '$years', '$country')";
+VALUES ('$first','$last', '$uid', '$pwd', '$position', '$foot', '$club', '$startYearClub', '$gamesPlayed', '$goals', '$assists','$rewards','$video','$years', '$country')";
 
 $result = mysqli_query($conn, $sql);
 

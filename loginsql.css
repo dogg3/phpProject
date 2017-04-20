@@ -10,6 +10,14 @@ html {
 	
 	margin-top: 30px;
 }
+
+#kkk {
+	    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+
 	.regga {
 		font-family: sans-serif;
 		font-variant: small-caps;
@@ -23,6 +31,51 @@ html {
 	
 		    background-color: white;
 	}
+
+
+.profildata {
+	background: #234042;
+    color: white;
+    text-align: left;
+    margin: 0px;
+    padding: 15px;
+}
+.searchBar {
+	    border: 0px;
+    border-radius: 3px;
+    margin-top: 4px;
+    padding-left:0px; 
+    margin:0px;
+    padding-top: 3px;
+}
+
+	.searchPos {
+		    margin-left: 56px;
+    margin-top: -20px;
+	}
+
+	.kortet {
+		height:70%; background-size: 260px 400px;
+		 background-image: url(playerProfile2.png); 
+		 background-repeat: no-repeat;
+		 width: 260px;
+	}
+
+	.searchBild {
+		    width: 38px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 20px;
+	}
+
+	.kortetAge {
+	margin-top:50px;
+	 margin-left:30px; 
+	 font-size:40px; 
+	 color:white;
+	}
+
+	
 
  h2 {
 		font-family: sans-serif;
@@ -262,6 +315,7 @@ select {
 .namnet {
 text-align: center;
     color: white;
+
 }
 
 .profilruta li {
@@ -305,10 +359,6 @@ text-align: center;
 }
 
 
-#litenTextProfilRuta {
-
-	
-}
 
 .litenTextProfilRuta {
 
@@ -331,6 +381,7 @@ background-color: white;
 text-align: center;
     height: 25px;
     line-height: 25px;
+
 
 }
 
@@ -374,6 +425,10 @@ img {
 
 }
 
+.kortetPos {
+	margin-top: 240px; text-align: center; margin-left: 0px;  
+}
+
 
 .bilderna {
 	border:1px solid black;
@@ -383,6 +438,19 @@ img {
 
 
 
+}
+.strecket {
+	height: 40px; background-color: #234042; margin-top: 8px;
+	color:white;
+	text-align: center;
+	padding-top: 10px;
+}
+.ppKortet {
+	float:left;height:140px;  width:140px; margin-left:15px; margin-top:55px;
+}
+
+.flaggan {
+	width:45px; height:30px;
 }
 
 #bildText {
@@ -411,6 +479,12 @@ img {
 #firsText {
 	text-align: center;
 	text-transform: small-caps;
+}
+
+.fint {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
 }
 
 #meny {
@@ -464,8 +538,8 @@ color:black;
 
 #hej {
 	background-color: #1d2129;
-	padding-top: 30px; 
-	padding-bottom: 30px;
+	padding-top: 40px; 
+	padding-bottom: 90px;
 }
 
 .containerBild {
@@ -532,9 +606,11 @@ color: black;}
 
 
 
-@media (min-width: 800px) { 
+
+@media (min-width: 760px) { 
 .bilderna {
-	border:1px solid black;
+	
+
 	
 	height: 200px;
 	margin-top: 15px;
@@ -543,18 +619,11 @@ color: black;}
 
 }
 
-.namnet {
-	margin-top: 142px;
-    color: white;
-}
 
 
-.updateProfile {
-margin-top: 150px;
-background-color: white;
-text-align: center;
 
-}
+
+
 
 
 
@@ -596,11 +665,33 @@ text-align: center;
 
 
 
+.kortet {
+
+    margin-bottom: -2500px;
+    z-index: 996;"
+}
+.fint {
+	margin-top: -90px;
+
+}
+	.namnet {
+	margin-top: 80px;
+    color: white;
+}
+
+
+
 
 
  }
 
 @media (max-width: 800px) { 
+
+	.namnet {
+	margin-top: 50px;
+    color: white;
+}
+
 
 	.containerBild {
  background-size: 140% 100%;
@@ -621,6 +712,18 @@ text-align: center;
 .profilNav {
 	padding-left: 0px;
 
+}
+#hej {
+	background-color: #1d2129;
+	padding-top: 20px; 
+	padding-bottom: 30px;
+}
+
+
+
+
+.strecket {
+	margin-left: -5px;
 }
 
 
