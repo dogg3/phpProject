@@ -1,5 +1,5 @@
 <?php 
-$conn = mysqli_connect("localhost", "root", "", "logintest");
+$conn = mysqli_connect("localhost", "root", "2010#Abc", "logintest");
 
 
 if (!$conn) {

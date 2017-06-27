@@ -1,7 +1,7 @@
 	<?php 
 
-mysql_connect("localhost", "root", "");
-mysql_select_db('logintest');
+mysql_connect("localhost", "root", "2010#Abc");
+mysql_select_db('playerlot');
 if (isset($_SESSION['id'])) {
 $id = $_SESSION['id'];
 
