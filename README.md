@@ -1,3 +1,3 @@
 # phpproject
 
-### en databas för fotbollspelare
+### Playing around: building a system for college soccer.
